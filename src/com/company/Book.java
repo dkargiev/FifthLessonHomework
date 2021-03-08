@@ -1,0 +1,46 @@
+package com.company;
+
+public final class Book extends Reader {
+    final String name;
+    final String author;
+    final int serialNumberInTheSeries;
+    final int numberOfPages;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", serialNumberInTheSeries=" + serialNumberInTheSeries +
+                ", numberOfPages=" + numberOfPages +
+                '}';
+    }
+
+    public Book(String name, String author, int serialNumberInTheSeries, int numberOfPages) {
+        this.name = name;
+        this.author = author;
+        this.serialNumberInTheSeries = serialNumberInTheSeries;
+        this.numberOfPages = numberOfPages;
+    }
+
+    public Book(String name, String author) {
+        this.name = name;
+        this.author = author;
+        this.serialNumberInTheSeries = 0;
+        this.numberOfPages = 0;
+    }
+
+    public Book(String name, int serialNumberInTheSeries) {
+        this.name = name;
+        this.serialNumberInTheSeries = serialNumberInTheSeries;
+        this.author = "";
+        this.numberOfPages = 0;
+    }
+
+    public Book(String name) {
+        this.name = name;
+        this.author = "";
+        this.serialNumberInTheSeries = 0;
+        this.numberOfPages = 0;
+    }
+}
