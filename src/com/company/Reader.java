@@ -6,13 +6,12 @@ public class Reader {
 
     final Book choiceBook(Book[] book) {
         Random random = new Random();
-        int randomNumberForBook = random.nextInt(4);
+        int randomNumberForBook = random.nextInt(book.length);
         return book[randomNumberForBook];
     }
 
     final void readBook(Book book) {
-        String randomBook = "";
-        randomBook = book.toString();
+        String randomBook = book.toString();
         System.out.println(randomBook);
     }
 
@@ -25,7 +24,10 @@ public class Reader {
         Random random = new Random();
         int randomNumberForRating = random.nextInt(10);
 
-        if (book.author.isEmpty()) {
+        if (book.name.length() == 0) {
+            rating = rating - randomNumberForRating;
+        }
+        if (book.author.length() == 0) {
             rating = rating - randomNumberForRating;
         }
         if (book.serialNumberInTheSeries == 0) {

@@ -30,17 +30,17 @@ public final class Book extends Reader {
         this.numberOfPages = 0;
     }
 
-    public Book(String name, int serialNumberInTheSeries) {
-        this.name = name;
+    public Book(int serialNumberInTheSeries, int numberOfPages) {
         this.serialNumberInTheSeries = serialNumberInTheSeries;
+        this.numberOfPages = numberOfPages;
+        this.name = "";
         this.author = "";
-        this.numberOfPages = 0;
     }
 
-    public Book(String name) {
-        this.name = name;
-        this.author = "";
-        this.serialNumberInTheSeries = 0;
+    public Book(String author, int serialNumberInTheSeries) {
+        this.author = author;
+        this.serialNumberInTheSeries = serialNumberInTheSeries;
+        this.name = "";
         this.numberOfPages = 0;
     }
 }
